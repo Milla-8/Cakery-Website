@@ -1,0 +1,204 @@
+
+html, body {
+    margin: 0; /* Remove default margins */
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color:rgb(250, 224, 230);
+    font-family: Georgia, Verdana, Geneva, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.logo-container {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    overflow: hidden; /* Make sure nothing is shown outside of header area */
+    margin-bottom: 0px;
+}
+
+/* Logo/picture in header */
+.logo {
+    width: 100%; /* Covers all width */
+    height: auto;
+}
+
+/* Company name in header */
+.logo-text {
+    position: absolute; /* Place text on top of logo/picture */
+    top: 50%;
+    left: 70%; /* Move text a little to the right for nicer look */
+    transform: translate(-50%, -50%); /* Make sure it has correct chosen position */
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow on text */
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.header {
+    display: flex; 
+    justify-content: center;
+    gap: 20px; 
+    margin-top: 0px;
+}
+
+.header a {
+    background-color: #bf97a7; 
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.header a:hover {
+    background-color: #9c6e6e; /* Make color darker when hovered over */
+    transform: translateY(-5px); /* Change placement when hovered over */
+}
+
+.header a:active {
+    transform: translateY(1px); /* Makes it look like a button is clicked */
+}
+
+.name {
+    font-size: 20px;
+    margin: 2px;
+}
+
+.price {
+    font-size: 14px;
+    margin: 5px;
+    padding-bottom: 30px;
+}
+
+.picture {
+    width: 250px;
+    height: 250px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.wcake-container,
+.cupcake-container,
+.product-container
+ {
+    display: flex;
+    gap: 20px;
+}
+
+.product-container .name {
+    font-size: 30px;
+}
+
+section {
+    display:flex;
+    flex-direction: column; /* to make picture be above text*/
+    align-items: center; /* to center the content horizontally*/
+    text-align: center; /* to center the text*/
+}
+
+.product-container .picture {
+    width: 400px;
+    height: 400px;
+}
+
+.contact {
+    font-size: 20px;
+    font-weight: bold; 
+}
+
+.content {
+    flex: 1; /* All available height */
+    padding: 20px;
+    margin-bottom: 50px; /* Create space between content and footer */
+    margin-top: 50px; /* Create space between header and content */
+}
+
+.footer {
+    background-color: #bf97a7;
+    color: white; 
+    text-align: center; 
+    padding: 10px;
+}
+
+/* Settings for example tablets */
+@media screen and (max-width: 768px) {
+    .logo-text {
+        font-size: 2rem;
+    }
+
+    .header {
+        font-size: 18px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .picture {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Justera produktbildstorlek */
+    .product-container .picture {
+        width: 300px;
+        height: 300px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
+
+/* Settings for example phones */
+@media screen and (max-width: 480px) {
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .header {
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+    .name {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 12px;
+    }
+
+    .picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .product-container .picture {
+        width: 250px;
+        height: 250px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+}
